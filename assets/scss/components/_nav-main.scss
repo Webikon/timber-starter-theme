@@ -1,0 +1,36 @@
+.nav-main {
+
+}
+
+.nav-main-items {
+	overflow: hidden;
+	max-height: 0;
+	padding-left: 0;
+	list-style-type: none;
+	transition: max-height 0.25s ease;
+
+	&[aria-expanded="true"] {
+		max-height: 999px;
+	}
+
+	@include breakpoint(medium) {
+		display: flex;
+		flex-wrap: wrap;
+		max-height: none;
+
+		& > li {
+		}
+	}
+}
+
+.nav-main-item-link {
+	padding: rem-calc(10);
+}
+
+
+// Link to open the nav
+.nav-main-trigger {
+	@include breakpoint(medium) {
+		display: none;
+	}
+}

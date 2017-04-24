@@ -1,0 +1,41 @@
+@import "settings"; // foundation settings
+@import 'foundation';
+@import 'util/util'; // Sass utilities
+
+@include foundation-global-styles;
+// @include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+
+// Include utilities
+@import "utility/mixins";
+@import "utility/accessibility";
+@import "utility/alignments";
+@import "utility/helpers";
+
+// Include elements
+@import "elements/buttons";
+@import "elements/captions";
+@import "elements/forms";
+@import "elements/galleries";
+@import "elements/icons";
+@import "elements/lists";
+@import "elements/media";
+@import "elements/tables";
+@import "elements/typography";
+@import "elements/widgets";
+
+// Include components
+// @import "components/components";
+
+// TinyMCE bg fix
+body#tinymce {
+	overflow-x: hidden;
+	height: auto;
+	padding: 1rem !important;
+	background-color: #fff;
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+}

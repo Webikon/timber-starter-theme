@@ -1,0 +1,53 @@
+// Rem output with px fallback
+@mixin font-size($size-value: 1) {
+	font-size: ($size-value * 16) * 1px;
+	font-size: $size-value * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Mixin for vertical center using absolute position and transform
+@mixin absolute-vertical-center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX( -50% ) translateY( -50% );
+}
+
+// Stretch image to whole area and vertical center it using absolute position and transform
+@mixin image-cover-simulation() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX( -50% ) translateY( -50% );
+	z-index: 0;
+	height: auto;
+	width: auto;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: none;
+}
+
+// Uppercase, slightly letterspaced text. Could use for headings.
+// Mainly a timesaver.
+@mixin upperspace() {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

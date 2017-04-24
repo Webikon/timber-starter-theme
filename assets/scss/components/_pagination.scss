@@ -1,0 +1,24 @@
+/*
+	Styles for PAGINATION, POSTS NAVIGATION, etc.
+*/
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		overflow: hidden;
+		margin: 0 0 1.5em;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		width: 50%;
+		text-align: right;
+	}
+}

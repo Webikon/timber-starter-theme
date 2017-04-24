@@ -1,0 +1,123 @@
+// ----
+//
+// Table of Contents
+//
+// Import all our SASS partials here.
+// Don't add styles to this file, keep everything separated into the partials - it helps to keep the code in reusable chunks.
+//
+// ----
+
+
+//--
+// 1. Import vendor (third party code).
+// 	  We do this first because we may override some of these and they are not dependent on our code
+//--
+
+// @import "vendor/..";
+
+
+//--
+// 2. Import Foundation styles.
+// 	  Uncomment all components we may need in this project.
+//--
+
+// Behold, here are all the Foundation components.
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+@import "settings"; // Foundation settings
+@import 'global'; // Global variables and styles
+@import 'foundation';
+
+// @import 'motion-ui';
+@include foundation-global-styles; // These include Foundation HTML classes. Use wisely to reduce CSS file size.
+// @include foundation-grid;
+// @include foundation-typography;
+// @include foundation-button;
+// @include foundation-forms;
+// @include foundation-visibility-classes;
+// @include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
+
+
+//--
+// 3. Import our variables and mixins.
+//    Other than the helpers file, this code doesn't actually compile to anything - just utilities to be used throughout the partials.
+//--
+
+@import "utility/variables"; // TODO remove?
+@import "utility/mixins";
+@import "utility/accessibility";
+@import "utility/alignments";
+@import "utility/helpers";
+
+
+//--
+// 4. Import templates styles.
+//    Styles for specific page templates like archive, single, contact template, etc.
+//--
+
+@import "templates/base";
+
+
+//--
+// 5. Import actual component styles.
+//    See the files for descriptions of their contents.
+//--
+
+@import "elements/buttons";
+@import "elements/captions";
+@import "elements/forms";
+@import "elements/galleries";
+@import "elements/icons";
+@import "elements/lists";
+@import "elements/media";
+@import "elements/tables";
+@import "elements/typography";
+@import "elements/widgets";
+
+
+//--
+// 6. Import actual partial styles (component styles).
+//    See the files for descriptions of their contents.
+//--
+
+@import "components/footer";
+@import "components/nav-main";
+@import "components/pagination";
+
+
+//--
+// 7. Import shameful styles.
+//    Uh oh, what's this? A technique developed by the ingenious Harry Roberts (http://j.mp/shamecss), the _shame.scss contains all of the styles you know you shouldn't be doing. This might include !importants, hacky overrides, or verbose styles you know can be done differenty. The idea is that you have all of them in one place to address later.
+//--
+
+@import "shame";

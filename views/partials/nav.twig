@@ -1,0 +1,20 @@
+<nav class="nav-main" id="site-navigation">
+	<button href="#" class="nav-main-trigger">Menu</button>
+
+	<ul class="nav-main-items">
+		{% for item in menu.get_items %}
+			<li class="nav-main-item {{item.classes | join(' ')}}">
+				<a class="nav-main-item-link" href="{{item.link}}">{{item.title}}</a>
+				{% if item.get_children %}
+					<ul class="nav nav-main-drop">
+					{% for child in item.get_children %}
+						<li class="nav-main-drop-item">
+							<a class="nav-main-link" href="{{child.get_link}}">{{child.title}}</a>
+						</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</nav>

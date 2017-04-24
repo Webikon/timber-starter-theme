@@ -1,0 +1,29 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "rules": {
+        "indent": [
+            "warn",
+            "tab"
+        ],
+        "linebreak-style": [
+            "warn",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-warning-comments": [ 1, {"terms": ["todo"], "location": "anywhere"} ],
+        "no-console": 1,
+        "no-extra-parens": 1,
+        "space-before-blocks": [1, "always" ]
+    }
+}
