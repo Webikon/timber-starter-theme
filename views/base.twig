@@ -1,5 +1,5 @@
 {% block html_head %}
-	{% include 'html-header.twig' %}
+	{% include 'partials/html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
@@ -18,13 +18,13 @@
 		</header>
 
 		<main role="main" class="site-main">
-			<div class="wrapper {{sidebar_class}}">
+			<div class="site-main-wrapper {{sidebar_class}}">
 				{% block content %}
-					Sorry, no content
+					{{ __( 'Sorry, no content.', 'wbkn' ) }}
 				{% endblock %}
 			</div>
 			{% if sidebar %}
-				<aside class="main-sidebar">
+				<aside class="site-main-sidebar">
 					{{sidebar}}
 				</aside>
 			{% endif %}
@@ -33,7 +33,7 @@
 		<footer class="site-footer">
 			{% block footer %}
 				<div class="site-footer-wrapper">
-					{% include 'footer.twig' %}
+					{% include 'partials/footer.twig' %}
 				</div>
 			{% endblock %}
 		</footer>
