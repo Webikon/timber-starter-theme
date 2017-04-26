@@ -5,3 +5,10 @@
  *
  * @package  WordPress
  */
+
+/**
+* Load CPT_Core.
+*
+* @link https://github.com/WebDevStudios/CPT_Core
+*/
+require_once 'CPT_Core/CPT_Core.php';

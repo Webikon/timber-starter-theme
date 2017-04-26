@@ -77,31 +77,11 @@ class StarterSite extends TimberSite {
 
 		// Uncomment any of this if needed.
 		add_action( 'init', array( $this, 'register_menus' ) );
-		add_action( 'init', array( $this, 'register_post_types' ) );
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'init', array( $this, 'register_widgets' ) );
 
 		parent::__construct();
 	}
 
-
-	/**
-	 * Abstracting long chunks of code.
-	 *
-	 * The following included files only need to contain the arguments and register_whatever functions.
-	 * They are applied to WordPress in these functions that are hooked to init above.
-	 * The point of having separate files is solely to save space in this file. Think of them as a standard PHP include or require.
-	 */
-	function register_post_types() {
-		require get_template_directory() . '/lib/custom-types.php';
-	}
-
-	/**
-	 * Get taxonomies registration file.
-	 */
-	function register_taxonomies() {
-		require get_template_directory() . '/lib/taxonomies.php';
-	}
 
 	/**
 	 * Get menus registration file.
@@ -163,6 +143,15 @@ function wbkn_content_width() {
 }
 add_action( 'after_setup_theme', 'wbkn_content_width', 0 );
 
+/*
+* Get CPT registration file.
+*/
+require get_template_directory() . '/lib/cpts.php';
+
+/**
+* Get taxonomies registration file.
+*/
+require get_template_directory() . '/lib/taxonomies.php';
 
 /**
  * Load css and js.
