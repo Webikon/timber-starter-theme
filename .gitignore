@@ -1,4 +1,5 @@
 /.gitmodules
+
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
@@ -143,3 +144,9 @@ node_modules/
 bower_components/
 npm-debug.log
 npm-debug.log*
+
+# processed assets
+dist/
+
+# composer files
+/vendor/
