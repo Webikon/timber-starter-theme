@@ -48,6 +48,9 @@ function wbkn_theme_setup() {
 		add_editor_style( get_template_directory_uri() . '/dist/css/editor-style.min.css' );
 	}
 
+	// Reduce image quality a link_title
+	add_filter( 'jpeg_quality', function() { return 85; } );
+
 }
 add_action( 'after_setup_theme', 'wbkn_theme_setup' );
 

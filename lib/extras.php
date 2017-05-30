@@ -8,14 +8,26 @@
  */
 
 /**
- * Flush out the transients used in _s_categorized_blog.
+ * Redirect missing and unnecessary pages.
  */
-function wbkn_category_transient_flusher() {
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+function wbkn_redirect_missing_archives() {
+	global $wp_query, $post;
+
+	if ( is_attachment() ) {
+		$post_parent = $post->post_parent;
+
+		if ( $post_parent ) {
+			wp_redirect( get_permalink( $post->post_parent ), 301 );
+			exit;
+		}
+
+		$wp_query->set_404();
+
 		return;
 	}
-	// Like, beat it. Dig?
-	delete_transient( 'wbkn_categories' );
+
+	if ( is_author() || is_date() ) {
+		$wp_query->set_404();
+	}
 }
-add_action( 'edit_category', 'wbkn_category_transient_flusher' );
-add_action( 'save_post', 'wbkn_category_transient_flusher' );
+add_action( 'template_redirect', 'wbkn_redirect_missing_archives' );

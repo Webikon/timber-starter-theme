@@ -8,12 +8,17 @@
 /*
 * Get Timber setup file.
 */
-require get_template_directory() . '/lib/timber_specific.php';
+require get_template_directory() . '/lib/timber-specific.php';
+
+/*
+* Get Theme cleanup file.
+*/
+require get_template_directory() . '/lib/cleanup.php';
 
 /*
 * Get Theme setup file.
 */
-require get_template_directory() . '/lib/theme_setup.php';
+require get_template_directory() . '/lib/theme-setup.php';
 
 /*
 * Get CPT registration file.
@@ -31,12 +36,12 @@ require get_template_directory() . '/lib/taxonomies.php';
 require get_template_directory() . '/lib/assets.php';
 
 /**
- * Get Widgets registrations
+ * Get Widgets registrations.
  */
 require get_template_directory() . '/lib/widgets.php';
 
 /**
- * Get Menus registrations
+ * Get Menus registrations.
  */
 require get_template_directory() . '/lib/menus.php';
 
@@ -44,3 +49,8 @@ require get_template_directory() . '/lib/menus.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/lib/extras.php';
+
+/**
+ * Image enhancements and customizations.
+ */
+require get_template_directory() . '/lib/images.php';
