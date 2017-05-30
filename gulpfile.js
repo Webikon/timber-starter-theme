@@ -215,9 +215,7 @@ gulp.task('concat-build', function() {
 	.pipe(plumber())
 	.pipe(babel())
 	.pipe(concat('theme.js'))
-	.pipe(uglify({
-		outSourceMap: true
-	}))
+	.pipe(uglify())
 	.pipe(rename({ suffix: '.min' }))
 	.pipe(lineec())
 	.pipe(gulp.dest('dist/js'));
