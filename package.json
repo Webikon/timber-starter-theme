@@ -7,10 +7,10 @@
     "babel-preset-es2015": "latest",
     "babel-register": "latest",
     "browser-sync": "latest",
-    "foundation-sites": "^6.3.1",
+    "foundation-sites": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "latest",
     "gulp-clean-css": "latest",
     "gulp-concat": "latest",
     "gulp-flatten": "latest",
@@ -22,7 +22,8 @@
     "gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
-    "motion-ui": "latest"
+    "motion-ui": "latest",
+    "picturefill": "latest"
   },
   "dependencies": {}
 }

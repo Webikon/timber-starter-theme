@@ -3,6 +3,45 @@
  * Image enhancements and customizations
  */
 
+// Reset post thumbnail size, because Timmy register its own sizes
+set_post_thumbnail_size( 0, 0 );
+
+/**
+ * Register Timmy image sizes
+ * @return array $image_sizes
+ */
+function get_image_sizes() {
+	$image_sizes = array();
+
+	/**
+	 * The thumbnail size is used to show thumbnails in the backend.
+	 * You should always have an entry with the 'thumbnail' key.
+	 */
+	$image_sizes['thumbnail'] = array(
+		'resize' => array( 150, 150 ),
+		'name' => 'Thumbnail',
+		'post_types' => array( 'all' ),
+	);
+
+	$image_sizes['medium'] = array(
+		'resize' => array( 300 ),
+		'name' => 'Medium',
+		'post_types' => array( 'all' ),
+	);
+
+	$image_sizes['large'] = array(
+		'resize' => array( 1000 ),
+		'srcset' => array(
+			array( 640 ),
+			array( 480 ),
+		),
+		'name' => 'Large',
+		'post_types' => array( 'all' ),
+	);
+
+
+	return $image_sizes;
+}
 
 /**
  * Add rel="lightbox" to content images links

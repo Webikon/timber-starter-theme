@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ff737dd0666dd7c01b45d0061b91c7c",
+    "content-hash": "0df2e7a995ffc5c176351f619a787171",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -224,6 +224,55 @@
                 "zikula"
             ],
             "time": "2017-04-24T06:37:16+00:00"
+        },
+        {
+            "name": "mindkomm/timmy",
+            "version": "0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MINDKomm/timmy.git",
+                "reference": "09e7b46189d22783358e548d56698b1ac4c0e980"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MINDKomm/timmy/zipball/09e7b46189d22783358e548d56698b1ac4c0e980",
+                "reference": "09e7b46189d22783358e548d56698b1ac4c0e980",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "timber/timber": "^1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Timmy\\": "lib/"
+                },
+                "files": [
+                    "init.php",
+                    "functions-images.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Gaechter",
+                    "email": "lukas.gaechter@mind.ch",
+                    "homepage": "https://www.mind.ch"
+                }
+            ],
+            "description": "Advanced image manipulation for Timber.",
+            "keywords": [
+                "images",
+                "responsive",
+                "timber",
+                "timmy",
+                "wordpress"
+            ],
+            "time": "2017-04-26T16:18:15+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",

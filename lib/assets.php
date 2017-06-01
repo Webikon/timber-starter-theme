@@ -18,6 +18,7 @@ function wbkn_assets() {
 	}
 
 	// Enqueue external assets here
+	wp_enqueue_script( 'wbkn-picturefill', get_template_directory_uri() . '/dist/js/vendor/picturefill.' . $min . 'js', array( 'jquery' ), '0.0.1', true );
 
 	// These assets should be loaded last, so enqueue external assets above this line
 	wp_enqueue_style( 'wbkn-style', get_template_directory_uri() . '/dist/css/style.' . $min . 'css', array(), '0.0.1' );
@@ -29,3 +30,22 @@ function wbkn_assets() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wbkn_assets' );
+
+/**
+ * Asynchronously load defined scripts
+ *
+ * Source: https://matthewhorne.me/defer-async-wordpress-scripts/
+ */
+function wbkn_async_script_atts( $tag, $handle ) {
+	// add script handles to the array below
+	$scripts_to_async = array( 'wbkn-picturefill' );
+
+	foreach ( $scripts_to_async as $async_script ) {
+		if ( $async_script == $handle ) {
+			return str_replace( ' src', ' async="async" src', $tag );
+		}
+	}
+
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'wbkn_async_script_atts', 10, 2 );

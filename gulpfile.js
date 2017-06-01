@@ -60,6 +60,7 @@ var paths = {
 	copyScripts: [
 	],
 	vendorScripts: [
+		'node_modules/picturefill/dist/picturefill.js',
 	],
 	vendorStyles: [
 	],

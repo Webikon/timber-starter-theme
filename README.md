@@ -1,7 +1,7 @@
 # Timber Starter Theme (Webikon version)
 
 This theme uses Timber framework.
-Also includes Gulp workflow, basic dotfiles and Foundation 6.
+Also includes Gulp workflow, basic dotfiles, Foundation 6 and Timmy for advanced image manipulation.
 
 
 ## Working with the Theme
@@ -28,7 +28,7 @@ To get started:
 
 1. Clone this repo to your WordPress themes directory
 2. Run `$ yarn install` or `$ npm install` to download dependencies
-2. Run `$ composer install` to download Timber
+2. Run `$ composer install` to download Timber and Timmy
 3. Adjust the Foundation variables file in `assets/scss/_settings.scss` to your needs
 4. Set your localhost dev domain in `gulpfile.js` for BrowserSync to work
 5. Select which Foundation js plugins and utils you wish to use in `gulpfile.js`
@@ -55,6 +55,13 @@ install and configure several packages:
 - `scss lint`: https://atom.io/packages/linter-scss-lint or https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint
 - `eslint`: https://atom.io/packages/linter-eslint or https://packagecontrol.io/packages/SublimeLinter-contrib-eslint
 - `phpcs`: https://atom.io/packages/linter-phpcs or https://packagecontrol.io/packages/Phpcs. Use `Wordpress-Core` standards. How to use WPCS: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards#how-to-use
+
+
+## Related docs
+http://timber.github.io/timber/
+https://twig.sensiolabs.org/doc/2.x/
+https://github.com/MINDKomm/timmy
+
 
 ## Structure
 
