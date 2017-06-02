@@ -21,8 +21,8 @@ function wbkn_assets() {
 	wp_enqueue_script( 'wbkn-picturefill', get_template_directory_uri() . '/dist/js/vendor/picturefill.' . $min . 'js', array( 'jquery' ), '0.0.1', true );
 
 	// These assets should be loaded last, so enqueue external assets above this line
-	wp_enqueue_style( 'wbkn-style', get_template_directory_uri() . '/dist/css/style.' . $min . 'css', array(), '0.0.1' );
-	wp_enqueue_script( 'wbkn-theme', get_template_directory_uri() . '/dist/js/theme.' . $min . 'js', array( 'jquery' ), '0.0.1', true );
+	wp_enqueue_style( 'wbkn-style', get_template_directory_uri() . '/dist/css/style' . $min . '.css', array(), '0.0.1' );
+	wp_enqueue_script( 'wbkn-theme', get_template_directory_uri() . '/dist/js/theme' . $min . '.js', array( 'jquery' ), '0.0.1', true );
 
 	// Delete this if comments are not used
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
