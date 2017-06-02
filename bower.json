@@ -1,8 +1,0 @@
-{
-	"name": "wbkn",
-	"version": "0.0.1",
-	"dependencies": {
-		"foundation-sites": "^6.3.1",
-		"motion-ui": "latest"
-	}
-}
