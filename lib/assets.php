@@ -18,7 +18,7 @@ function wbkn_assets() {
 	}
 
 	// Enqueue external assets here
-	wp_enqueue_script( 'wbkn-picturefill', get_template_directory_uri() . '/dist/js/vendor/picturefill.' . $min . 'js', array( 'jquery' ), '0.0.1', true );
+	wp_enqueue_script( 'wbkn-picturefill', get_template_directory_uri() . '/dist/js/vendor/picturefill' . $min . '.js', array( 'jquery' ), '0.0.1', true );
 
 	// These assets should be loaded last, so enqueue external assets above this line
 	wp_enqueue_style( 'wbkn-style', get_template_directory_uri() . '/dist/css/style' . $min . '.css', array(), '0.0.1' );

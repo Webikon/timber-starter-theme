@@ -58,14 +58,16 @@ install and configure several packages:
 
 
 ## Related docs
-http://timber.github.io/timber/
-https://twig.sensiolabs.org/doc/2.x/
-https://github.com/MINDKomm/timmy
+- http://timber.github.io/timber/
+- https://twig.sensiolabs.org/doc/2.x/
+- https://github.com/MINDKomm/timmy
 
 
 ## Structure
 
 `assets/` contains static front-end files and images. In other words, your Sass files, JS files, SVGs, or any PNGs would live here.
+
+`assets/images/icons` contains SVG icons
 
 `acf-json/` contains JSON files for tracking Advanced Custom Fields. This is incredibly useful for version control. After cloning this repository, you can go into Custom Fields from the Dashboard and select "Sync" to import these custom fields into your theme.
 

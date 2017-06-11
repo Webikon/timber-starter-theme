@@ -54,3 +54,8 @@ require get_template_directory() . '/lib/extras.php';
  * Image enhancements and customizations.
  */
 require get_template_directory() . '/lib/images.php';
+
+/**
+ * Icons helper functions.
+ */
+require get_template_directory() . '/lib/icons.php';

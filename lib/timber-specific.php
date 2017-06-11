@@ -27,6 +27,9 @@ function wbkn_add_to_context( $context ) {
 	// Our menu occurs on every page, so we add it to the global context.
 	$context['menu'] = new TimberMenu( 'primary' );
 
+	// All registered icons
+	$context['icons'] = wbkn_get_all_icons();
+
 	// This 'site' context below allows you to access main site information like the site title or description.
 	$context['site'] = new TimberSite();
 

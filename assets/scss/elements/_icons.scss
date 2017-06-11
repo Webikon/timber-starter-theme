@@ -1,0 +1,6 @@
+// Inherit styles from parent, so we can style svg element with wrapper .icon class
+.icon > svg {
+	width: inherit;
+	height: inherit;
+	fill: inherit;
+}
