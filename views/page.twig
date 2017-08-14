@@ -1,15 +1,13 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="page-content">
-		<article class="article post-type-{{ post.post_type }}" id="post-{{ post.id }}">
-			<section class="article-body">
-				<h1 class="article-title">{{ post.title }}</h1>
+	<article class="page-article page-article--{{ post.post_type }}" id="post-{{ post.id }}">
+		<section class="page-article__body">
+			<h1 class="page-article__title">{{ post.title }}</h1>
 
-				<div class="article-content">
-					{{ post.content }}
-				</div>
-			</section>
-		</article>
-	</div>
+			<div class="page-article__content">
+				{{ post.content }}
+			</div>
+		</section>
+	</article>
 {% endblock %}

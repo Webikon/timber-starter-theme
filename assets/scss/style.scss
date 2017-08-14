@@ -73,10 +73,12 @@
 // Other than the helpers file, this code doesn't actually compile to anything - just utilities to be used throughout the partials.
 //--
 
+// mixins always first
+@import "utility/mixins";
+
 @import "utility/accessibility";
 @import "utility/alignments";
 @import "utility/helpers";
-@import "utility/mixins";
 
 
 //--

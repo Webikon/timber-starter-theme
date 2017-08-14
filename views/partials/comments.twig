@@ -1,10 +1,10 @@
 <section class="comments">
-	<div class="comments-respond">
-		<h3 class="comments-title">{{ __( 'Comments', 'wbkn' ) }}</h3>
+	<div class="comments__respond">
+		<h3 class="comments__title">{{ __( 'Comments', 'wbkn' ) }}</h3>
 		{{ comment_form }}
 	</div>
 
-	<div class="comments-responses">
+	<div class="comments__responses">
 		{% for cmt in post.get_comments() %}
 			{% include "partials/comment.twig" with { comment : cmt } %}
 		{% endfor %}

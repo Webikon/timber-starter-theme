@@ -1,0 +1,13 @@
+{% block content %}
+	<article class="teaser teaser--{{ post.post_type }}" id="teaser-{{ post.ID }}">
+		<h2 class="teaser__title">
+			<a href="{{ post.link }}">{{ post.title }}</a>
+		</h2>
+
+		<p class="teaser__excerpt">{{ post.get_preview }}</p>
+
+		{% if post.get_thumbnail %}
+			<img src="{{ post.thumbnail.src }}" class="teaser__thumb" alt="{{ post.thumbnail.alt }}"/>
+		{% endif %}
+	</article>
+{% endblock %}

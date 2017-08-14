@@ -1,0 +1,21 @@
+<nav class="nav-main" id="site-navigation">
+	<button href="#" class="nav-main__trigger btn" data-toggle="js-nav-main">{{ __( 'Menu', 'wbkn' ) }}</button>
+
+	<ul class="nav-main__items" id="js-nav-main" data-toggler=".is-expanded">
+		{% for item in menu.get_items %}
+			<li class="nav-main__item {{ item.classes|join(' ')}}">
+				<a class="nav-main__link" href="{{ item.link }}" target="{{ item.target }}">{{ item.title }}</a>
+
+				{% if item.get_children %}
+					<ul class="nav nav-main__drop">
+						{% for child in item.get_children %}
+							<li class="nav-main__drop-item">
+								<a class="nav-main__drop-link" href="{{ child.get_link }}" target="{{ item.target }}">{{ child.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</nav>
