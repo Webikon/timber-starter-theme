@@ -3,13 +3,13 @@
 
 	<ul class="nav-main-items">
 		{% for item in menu.get_items %}
-			<li class="nav-main-item {{item.classes | join(' ')}}">
-				<a class="nav-main-item-link" href="{{item.link}}" target="{{item.target}}">{{item.title}}</a>
+			<li class="nav-main-item {{ item.classes|join(' ')}}">
+				<a class="nav-main-item-link" href="{{ item.link }}" target="{{ item.target }}">{{ item.title }}</a>
 				{% if item.get_children %}
 					<ul class="nav nav-main-drop">
 					{% for child in item.get_children %}
 						<li class="nav-main-drop-item">
-							<a class="nav-main-link" href="{{child.get_link}}">{{child.title}}</a>
+							<a class="nav-main-link" href="{{ child.get_link }}" target="{{ item.target }}">{{ child.title }}</a>
 						</li>
 					{% endfor %}
 					</ul>

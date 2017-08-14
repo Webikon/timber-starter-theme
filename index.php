@@ -26,6 +26,6 @@ $context['posts'] = Timber::get_posts();
 // If we are on the home page, add a few other templates to our hierarchy.
 $templates = array( 'index.twig' );
 if ( is_home() ) {
-	array_unshift( $templates, 'front-page.twig', 'home.twig' );
+	array_unshift( $templates, 'home.twig' );
 }
 Timber::render( $templates, $context );

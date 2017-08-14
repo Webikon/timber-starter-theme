@@ -5,38 +5,35 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<header class="site-header">
-			{% block header %}
+	<body class="{{ body_class }}" data-template="base.twig">
+		{% block header %}
+			<header class="site-header">
 				<div class="site-header-wrapper">
-					<h1 class="site-logo" role="banner">
-						<a class="site-logo-link" href="{{site.link}}" rel="home">{{site.name}}</a>
-					</h1>
+					{% include 'partials/site-logo.twig' %}
+
 					{% include 'partials/nav.twig' %}
 				</div>
-			{% endblock %}
-		</header>
+			</header>
+		{% endblock %}
 
 		<main role="main" class="site-main">
-			<div class="site-main-wrapper {{sidebar_class}}">
+			<div class="site-main-wrapper">
 				{% block content %}
 					{{ __( 'Sorry, no content.', 'wbkn' ) }}
 				{% endblock %}
 			</div>
+
 			{% if sidebar %}
 				<aside class="site-main-sidebar">
-					{{sidebar}}
+					{{ sidebar }}
 				</aside>
 			{% endif %}
 		</main>
 
-		<footer class="site-footer">
-			{% block footer %}
-				<div class="site-footer-wrapper">
-					{% include 'partials/footer.twig' %}
-				</div>
-			{% endblock %}
-		</footer>
+		{% block footer %}
+			{% include 'partials/footer.twig' %}
+		{% endblock %}
+
 		{{ function('wp_footer') }}
 
 	</body>

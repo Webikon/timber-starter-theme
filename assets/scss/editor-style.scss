@@ -1,6 +1,6 @@
 @import "settings"; // foundation settings
-@import 'foundation';
-@import 'util/util'; // Sass utilities
+@import "foundation";
+@import "util/util"; // Sass utilities
 
 @include foundation-global-styles;
 // @include foundation-grid;

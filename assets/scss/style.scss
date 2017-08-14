@@ -19,10 +19,10 @@
 // Licensed under MIT Open Source
 
 @import "settings"; // Foundation settings
-@import 'global'; // Global variables and styles
-@import 'foundation';
+@import "global"; // Global variables and styles
+@import "foundation";
 
-// @import 'motion-ui';
+// @import "motion-ui";
 @include foundation-global-styles; // These include Foundation HTML classes. Use wisely to reduce CSS file size.
 @include foundation-grid;
 @include foundation-typography;
@@ -73,10 +73,10 @@
 // Other than the helpers file, this code doesn't actually compile to anything - just utilities to be used throughout the partials.
 //--
 
-@import "utility/mixins";
 @import "utility/accessibility";
 @import "utility/alignments";
 @import "utility/helpers";
+@import "utility/mixins";
 
 
 //--
