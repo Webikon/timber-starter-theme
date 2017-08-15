@@ -24,35 +24,35 @@ var URL = 'wbkn.dev';
 // Paths
 var paths = {
 	scripts: [
-		'node_modules/foundation-sites/js/foundation.core.js',
-		// 'node_modules/foundation-sites/js/foundation.util.box.js',
-		// 'node_modules/foundation-sites/js/foundation.util.keyboard.js',
-		'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
-		// 'node_modules/foundation-sites/js/foundation.util.motion.js',
-		// 'node_modules/foundation-sites/js/foundation.util.nest.js',
-		// 'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
-		// 'node_modules/foundation-sites/js/foundation.util.touch.js',
-		'node_modules/foundation-sites/js/foundation.util.triggers.js',
-		// 'node_modules/foundation-sites/js/foundation.abide.js',
-		// 'node_modules/foundation-sites/js/foundation.accordion.js',
-		// 'node_modules/foundation-sites/js/foundation.accordionMenu.js',
-		// 'node_modules/foundation-sites/js/foundation.core.js',
-		// 'node_modules/foundation-sites/js/foundation.drilldown.js',
-		// 'node_modules/foundation-sites/js/foundation.dropdown.js',
-		// 'node_modules/foundation-sites/js/foundation.dropdownMenu.js',
-		// 'node_modules/foundation-sites/js/foundation.equalizer.js',
-		// 'node_modules/foundation-sites/js/foundation.interchange.js',
-		// 'node_modules/foundation-sites/js/foundation.magellan.js',
-		// 'node_modules/foundation-sites/js/foundation.offcanvas.js',
-		// 'node_modules/foundation-sites/js/foundation.orbit.js',
-		// 'node_modules/foundation-sites/js/foundation.responsiveMenu.js',
-		// 'node_modules/foundation-sites/js/foundation.responsiveToggle.js',
-		// 'node_modules/foundation-sites/js/foundation.reveal.js',
-		// 'node_modules/foundation-sites/js/foundation.slider.js',
-		// 'node_modules/foundation-sites/js/foundation.sticky.js',
-		// 'node_modules/foundation-sites/js/foundation.tabs.js',
-		'node_modules/foundation-sites/js/foundation.toggler.js',
-		// 'node_modules/foundation-sites/js/foundation.tooltip.js',
+		'node_modules/foundation-sites/dist/js/plugins/foundation.core.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.util.box.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.util.keyboard.js',
+		'node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js',
+		'node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.util.nest.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.util.timerAndImageLoader.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.util.touch.js',
+		'node_modules/foundation-sites/dist/js/plugins/foundation.util.triggers.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.abide.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.accordion.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.accordionMenu.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.core.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.drilldown.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.dropdown.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.dropdownMenu.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.equalizer.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.interchange.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.magellan.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.offcanvas.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.orbit.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.responsiveMenu.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.responsiveToggle.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.reveal.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.slider.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.sticky.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.tabs.js',
+		'node_modules/foundation-sites/dist/js/plugins/foundation.toggler.js',
+		// 'node_modules/foundation-sites/dist/js/plugins/foundation.tooltip.js',
 		'assets/js/skip-link-focus-fix.js',
 		'assets/js/theme.js',
 	],
@@ -201,9 +201,7 @@ gulp.task('vendorStyles-build', function() {
 gulp.task('concat-dev', function() {
 	gulp.src( paths.scripts )
 		.pipe(plumber())
-		.pipe(babel({
-			presets: ['es2015']
-		}))
+		.pipe(babel())
 		.pipe(concat('theme.js'))
 		.pipe(lineec())
 		.pipe(gulp.dest('dist/js'))

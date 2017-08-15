@@ -7,7 +7,7 @@
     "babel-preset-es2015": "latest",
     "babel-register": "latest",
     "browser-sync": "latest",
-    "foundation-sites": "latest",
+    "foundation-sites": "6.4.*",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-babel": "latest",
@@ -24,6 +24,5 @@
     "gulp-watch": "latest",
     "motion-ui": "latest",
     "picturefill": "latest"
-  },
-  "dependencies": {}
+  }
 }
