@@ -6,6 +6,21 @@ Also includes Gulp workflow, basic dotfiles, Foundation 6 and Timmy for advanced
 
 ## Working with the Theme
 
+### Compatibility
+
+One of the requirements for new versions of Timber (>1.3) is PHP7, so make sure your server is running PHP7 or higher.
+
+In other cases, if you really need to support older PHP, change versions in `composer.json` and run `composer update`:
+```
+{
+    "require": {
+        "timber/timber": "1.2.*",
+        "mindkomm/timmy": "0.10.*",
+		"twig/twig": "1.*.*"
+    }
+}
+```
+
 ### Installing
 
 1. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation.
@@ -52,7 +67,7 @@ To help maintain coding styles and standards between different editors and devel
 install and configure several packages:
 
 - `editorconfig`: https://github.com/sindresorhus/atom-editorconfig or https://github.com/sindresorhus/editorconfig-sublime
-- `scss lint`: https://atom.io/packages/linter-scss-lint or https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint
+- `scss lint`: https://atom.io/packages/linter-scss-lint or https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint or https://packagecontrol.io/packages/SublimeLinter-contrib-sass-lint
 - `eslint`: https://atom.io/packages/linter-eslint or https://packagecontrol.io/packages/SublimeLinter-contrib-eslint
 - `phpcs`: https://atom.io/packages/linter-phpcs or https://packagecontrol.io/packages/Phpcs. Use `Wordpress-Core` standards. How to use WPCS: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards#how-to-use
 

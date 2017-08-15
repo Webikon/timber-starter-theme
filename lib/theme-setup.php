@@ -65,3 +65,6 @@ function wbkn_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'wbkn_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'wbkn_content_width', 0 );
+
+// Don't allow users to change files from WP Admin
+define( 'DISALLOW_FILE_EDIT', true );
