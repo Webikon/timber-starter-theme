@@ -1,7 +1,24 @@
+{# <?php #}
+
 {% extends "base.twig" %}
 
 {% block content %}
-	{% for post in posts %}
-		{% include ['partials/teaser-'~post.post_type~'.twig', 'partials/teaser.twig'] %}
-	{% endfor %}
+
+	{# AJAX LOOP WRAPPER #}
+	<div class="ajax-posts js-ajax-posts">
+
+		{% block loop %}
+			<div class="ajax-posts__loop js-ajax-posts-loop">
+
+				{% for post in posts %}
+					{% include ['partials/teaser-'~post.post_type~'.twig', 'partials/teaser.twig'] %}
+				{% endfor %}
+
+			</div>
+		{% endblock %}
+
+
+		{% include ['partials/pager-ajax.twig'] %}
+
+	</div>
 {% endblock %}

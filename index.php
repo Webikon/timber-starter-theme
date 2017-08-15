@@ -20,7 +20,7 @@ if ( ! class_exists( 'Timber' ) ) {
 $context = Timber::get_context();
 
 // We can access the loop of WordPress posts with the 'posts' variable.
-$context['posts'] = Timber::get_posts();
+$context['posts'] = new Timber\PostQuery();
 
 
 // If we are on the home page, add a few other templates to our hierarchy.

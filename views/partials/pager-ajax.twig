@@ -1,0 +1,12 @@
+{# <?php #}
+{#
+	The Load More pager contains a single button, which loads more posts with AJAX.
+#}
+
+{% if posts.pagination.next %}
+	<div class="pager pager--load-more js-loop-cta">
+		<div class="pager__loader js-ajax-loader">{{ __( 'Loading...', 'wbkn' ) }}</div>
+
+		<a href="{{ posts.pagination.next.link }}" rel="next" class="pager__btn btn js-ajax-load-posts">{{ __( 'Load more', 'wbkn' ) }}</a>
+	</div>
+{% endif %}

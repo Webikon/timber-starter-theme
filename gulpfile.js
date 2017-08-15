@@ -55,6 +55,7 @@ var paths = {
 		// 'node_modules/foundation-sites/dist/js/plugins/foundation.tooltip.js',
 		'assets/js/skip-link-focus-fix.js',
 		'assets/js/theme.js',
+		'assets/js/ajax-pager.js',
 	],
 	copyScripts: [
 	],

@@ -1,0 +1,39 @@
+
+.pager {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	max-width: 300px;
+	margin: 1rem auto;
+
+	@include breakpoint(medium up) {
+		max-width: none;
+	}
+}
+
+.pager--load-more {
+	padding: 1rem 0;
+	text-align: center;
+
+	@include breakpoint(xsmall up) {
+		padding: 2.5rem 0;
+	}
+}
+
+.pager__btn {
+	margin: 0 auto;
+}
+
+.pager__loader {
+	position: relative;
+	display: none;
+	width: 1em;
+	height: 1em;
+	margin: 50px auto;
+	border-radius: 50%;
+	color: $primary-color;
+	font-size: rem-calc(5);
+	text-indent: -9999em;
+	animation: icon-ajax-load 1.3s infinite linear;
+	transform: translateZ(0);
+}
